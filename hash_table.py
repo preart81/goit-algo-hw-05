@@ -1,4 +1,6 @@
 class HashTable:
+    """Клас для створення хеш-таблиці"""
+
     def __init__(self, size):
         """Конструктор класу.
 
@@ -61,6 +63,8 @@ class HashTable:
             for pair in self.table[key_hash]:
                 if pair[0] == key:
                     self.table[key_hash].remove(pair)
+                    return True  # Повертаємо True, якщо видалення пройшло успішно
+        return False  # Повертаємо False, якщо видалення не вдалося
 
 
 if __name__ == "__main__":
